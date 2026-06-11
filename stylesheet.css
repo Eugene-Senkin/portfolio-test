@@ -1,106 +1,108 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 body {
   margin: 0;
   padding: 0;
-  background-color: #080808
+  background-color: #080808;
 }
 /* Если кроме этого экрана писать что-то ниже, перетащить background с body на header */
-.monobrow{
+.monobrow {
   height: 70px;
   width: 1110px;
   margin: 0 85px;
 }
-.container{
+.container {
   display: flex; /*здесь флекся котейнеры*/
-  background-color: #1B1B1B;
+  background-color: #1b1b1b;
   border-radius: 0 0 15px 15px;
-/*вот тут пока не понял, подгядел на видосе, что нужно создать отдельный контейнер
+  /*вот тут пока не понял, подгядел на видосе, что нужно создать отдельный контейнер
 в контейнере, если убрать, то все слетит, станет по горизонтали и т.п.*/
 }
-.item{
+.item {
   height: 70px;
-  width:  200px;
+  width: 200px;
   font-size: 20px;
   display: flex; /*а здесь флексит надпись в контецнере*/
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
   color: rgb(179, 179, 179);
 }
-.item-link{
+.item-link {
   text-decoration: none;
-  color: #9C9C9C;
+  color: #9c9c9c;
   margin: 10px;
-  font-family: 'IBM Plex Mono', sans-serif; /*чекнуть что-нибудь за шрифты*/
+  font-family: "IBM Plex Mono", sans-serif; /*чекнуть что-нибудь за шрифты*/
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 1%;
 }
-.text-block{
+.text-block {
   display: flex; /*здесь флексят заголовок, параграф, кнопка и фото*/
-    align-items: center;
+  align-items: center;
   margin: 131px 0 0 180px;
   width: 700px;
   height: 247px;
   gap: 100px;
   /*понял только методом перебора флекса и gap*/
 }
-.name, .work{
+.name,
+.work {
   color: #fff;
 }
-.name{
+.name {
   font-size: 44px;
   font-weight: 800;
   text-wrap-mode: nowrap;
 }
-.discriton{
+.discriton {
   font-size: 14px;
   font-weight: 400;
   width: 520;
-  color: #9C9C9C;
+  color: #9c9c9c;
   letter-spacing: 1%;
 }
-.button{
+.button {
   width: 308px;
   height: 63px;
-  background-color: #3F8E00;
-  border: 1px solid #62BA1B; 
-  font-size: 16px;  
+  background-color: #3f8e00;
+  border: 1px solid #62ba1b;
+  font-size: 16px;
   font-weight: 700;
   color: white;
   display: flex;
-    align-items: center;
-    justify-content: center;
-  box-shadow: 0 8px 30px 0 #3F8E0080;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 30px 0 #3f8e0080;
 }
-.button-link{
+.button-link {
   text-decoration: none;
   color: #ffffff;
 }
-.photo img{ /*не знал, что надо имг прописывать*/
+.photo img {
+  /*не знал, что надо имг прописывать*/
   height: 350px;
   width: 350px;
   object-fit: cover;
   border-radius: 50%;
 }
-.work{
+.work {
   margin: 109px 125px 20px;
 }
-.footer{
+.footer {
   display: flex;
-    justify-content: space-between;
+  justify-content: space-between;
   width: 920px;
   height: 60px;
   margin: 0 180px 0;
 }
-.foot{
+.foot {
   display: flex;
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 160px;
   max-width: 160px;
   height: 60px;
-  border: 1px solid #1B1B1B;
+  border: 1px solid #1b1b1b;
   flex-grow: 1;
 }
