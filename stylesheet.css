@@ -1,67 +1,93 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
   background-color: #080808;
+  min-height: 100dvh;
 }
-/* Если кроме этого экрана писать что-то ниже, перетащить background с body на header */
-.monobrow {
-  height: 70px;
-  width: 1110px;
-  margin: 0 85px;
+
+/* новый стиль */
+.navigation {
+  min-height: 70px; /*заминмаксил*/
+  max-width: 1110px;
+  margin: 0 auto; /* Центрируем шапку по экрану вместо жесткого margin: 0 85px */
 }
+
 .container {
-  display: flex; /*здесь флекся котейнеры*/
   background-color: #1b1b1b;
   border-radius: 0 0 15px 15px;
-  /*вот тут пока не понял, подгядел на видосе, что нужно создать отдельный контейнер
-в контейнере, если убрать, то все слетит, станет по горизонтали и т.п.*/
 }
-.item {
+/* можно обойтись без класса */
+.container ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0 30px; /* Внутренние отступы справа и слева, чтобы меню не липло к краям */
   height: 70px;
-  width: 200px;
-  font-size: 20px;
-  display: flex; /*а здесь флексит надпись в контецнере*/
+}
+.item-link:hover {
+  color: #555555;
+} /*+ховер*/
+/* Стили для пунктов меню (теперь это <li>) */
+.container ul li.item {
+  height: 70px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(179, 179, 179);
 }
+
+/* Отдельно флексим блок с иконками соцсетей внутри последнего li */
+.container ul li .item {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Расстояние между тремя иконками */
+}
+
 .item-link {
   text-decoration: none;
   color: #9c9c9c;
-  margin: 10px;
-  font-family: "IBM Plex Mono", sans-serif; /*чекнуть что-нибудь за шрифты*/
+  font-family: "IBM Plex Mono", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  letter-spacing: 1%;
+  letter-spacing: 0.01em; /* В CSS проценты для трекинга пишутся через em или px */
 }
+
+/* Главный текстовый блок */
 .text-block {
-  display: flex; /*здесь флексят заголовок, параграф, кнопка и фото*/
+  display: flex;
   align-items: center;
   margin: 131px 0 0 180px;
   width: 700px;
   height: 247px;
   gap: 100px;
-  /*понял только методом перебора флекса и gap*/
 }
+
 .name,
 .work {
   color: #fff;
 }
+
 .name {
   font-size: 44px;
   font-weight: 800;
-  text-wrap-mode: nowrap;
+  text-wrap: nowrap;
+  margin: 0;
 }
+
 .discriton {
   font-size: 14px;
   font-weight: 400;
-  width: 520;
+  width: 520px; /* ИСПРАВЛЕНО: добавили px */
   color: #9c9c9c;
-  letter-spacing: 1%;
+  letter-spacing: 0.01em;
 }
+
+/* Кнопка */
 .button {
   width: 308px;
   height: 63px;
@@ -75,27 +101,35 @@ body {
   justify-content: center;
   box-shadow: 0 8px 30px 0 #3f8e0080;
 }
+
 .button-link {
   text-decoration: none;
   color: #ffffff;
 }
+
+/* Фотография */
 .photo img {
-  /*не знал, что надо имг прописывать*/
   height: 350px;
   width: 350px;
   object-fit: cover;
   border-radius: 50%;
 }
+
+/* Футер */
 .work {
   margin: 109px 125px 20px;
 }
+
 .footer {
   display: flex;
   justify-content: space-between;
-  width: 920px;
-  height: 60px;
+  max-width: 920px;
+  min-height: 60px;
   margin: 0 180px 0;
+  list-style: none; /* ИСПРАВЛЕНО: убрали точки у футера */
+  padding: 0;
 }
+
 .foot {
   display: flex;
   align-items: center;
